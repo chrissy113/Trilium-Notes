@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: trilium-notes
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TRILIUM_DATA_DIR
+        value: /home/node/trilium-data
+    disk:
+      name: trilium-data
+      mountPath: /home/node/trilium-data
+      sizeGB: 1
